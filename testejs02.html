@@ -1,0 +1,32 @@
+<DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Teste JavaScript</title>
+		<meta charset="UTF-8"/>
+		<style>
+			h1 {
+				font-family:sans-serif;
+				font-size:25pt;
+				color:blue;
+				text-decoration:underline;
+				text-shadow: 0px 0px 8px red;
+			}
+		</style>
+		<script>
+			function acendeLampada() {
+				document.getElementById("luz").src="_imagens/lampada-acesa.jpg";
+			}
+			function apagaLampada(){
+				document.getElementById("luz").src="_imagens/lampada-apagada.jpg";
+			}
+			function quebraLampada() {
+				document.getElementById("luz").src="_imagens/lampada-quebrada.jpg";
+			}
+			
+		</script>
+	</head>
+	<body>
+		<h1><i>Acenda a Lâmpada<i/> </h1>
+		<img src="_imagens/lampada-apagada.jpg" id="luz" onmouseover="acendeLampada()" onmouseout="apagaLampada()" onclick="quebraLampada()" />
+	</body>
+</html>

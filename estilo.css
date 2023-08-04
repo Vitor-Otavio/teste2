@@ -1,0 +1,249 @@
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web); /* Para Fontes personalizadas do Google Fonts*/
+
+@font-face /* Para pegar fontes personalizadas */ {
+	font-family:'FonteLogo' /*Nome da fonte personalizada*/;
+	src:url("../_fonts/bubblegum-sans-regular.otf") /*origem da fonte*/;
+}	
+/* COMENT�RIOS EM CSS */
+		
+	/*-----------FORMATA��O B�SICA DA P�GINA------------- */
+			
+			body {
+				background-color:#dddddd; /* Azul Clarinho-> #a1d3ef */
+				color:rgba(0,0,0,1);
+				font-family:Arial,sans-serif;
+			}
+			div#interface {
+				width:900px;
+				background-color:white;
+				margin: -20px auto 0px auto; /*margin:cima,direita,baixo,esquerda*/
+				box-shadow:0px 0px 10px rgba(0,0,0,.5);
+				padding: 10px 10px 10px 15px; /*msm esquema do margin*/ 
+			}
+			p{
+				text-align:justify;
+				text-indent:50px;
+			}
+			a{
+				color:#606060;
+				text-decoration:none;
+			}
+			a:hover {
+				text-decoration:underline;
+			}
+			
+	/*------------- FORMATA��O DOS CONTE�DOS  SEM�NTICOS -------------*/
+			
+			section#conteudo-principal {
+				display: block;
+				width: 500px;
+				float:left;
+				border-right:1px solid #606060;
+				padding-right:15px;
+			}
+			article#noticia-principal h2 {
+				font-size: 13pt;
+				color:#606060;
+				background-color:#dddddd;
+				padding: 5px 0px 5px 10px;
+				margin:10px 0px 10px 0px;
+				font-weight:bolder;
+			}
+			video#filme_2 {
+				width:350px;
+			}
+			video#filme_1 {
+				margin-bottom:15px;
+			}
+			 
+			header#cabecalho-artigo h1 {
+				font-family:'FonteLogo',sans-serif;
+				font-size:20pt;
+				color:#606060;
+				margin-bottom:0px;
+				margin-top:0px;
+			}
+			._direita {
+				text-align:right;
+			}
+			header#cabecalho-artigo h2 {
+				font-size:13pt;
+				color:#cecece;
+				background-color:white;
+				margin:0px;
+			}
+			header#cabecalho-artigo h3 {
+				font-size:12px;
+				color:#606060;
+			}
+			
+			aside#conteudo-lateral {
+				display:block;
+				width: 350px;
+				float:right;
+				background-color:#dddddd;
+				padding:10px;
+				margin-top:12px;
+				box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+			}
+			aside#conteudo-lateral h1 {
+				font-family:'FonteLogo',sans-serif;
+				font-size:20pt;
+				color:#606060;
+				margin-top:0px;
+				
+			}
+			aside#conteudo-lateral h2{
+				background-color:#606060;
+				font-size:13pt;
+				color:white;
+				padding: 5px 0px 5px 10px;
+				margin:10px 0px 10px 0px;
+				font-weight:bolder;
+			}
+			
+			footer#conteudo-rodape {
+				clear:both; /*Para tirar a divis�o feita pelo section e aside */
+				border-top: 1px solid #606060;
+			}
+			footer#conteudo-rodape p {
+				text-align:center;
+			}
+			footer#conteudo-rodape img {
+				width:30px;
+				height:30px;
+				margin-bottom:-20px;
+			}
+	/*-------------FORMATA��O DO CABE�ALHO--------------*/
+			
+			
+
+			
+
+			header#cabecalho h1 {
+				font-family: 'FonteLogo',sans-serif;
+				font-size:30pt;
+				color:#606060;
+				text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+				padding:0px;
+				margin-bottom:0px;
+			}
+			header#cabecalho h2 {
+				font-family: 'Titillium Web',sans-serif;
+				color:#888888;
+				font-size:15pt;
+				padding: 0px;
+				margin-top:0px;	
+			}
+
+		
+			
+/*------------FORMATA��O DO MENU ------------------ */
+			
+			nav#menu  {
+				display:block; /*Para ser exibido como um bloco */
+			}
+	
+			nav#menu ul /*formata��o do nav que tem o id menu e  pra todo aquilo que for ul */{
+				list-style:none;
+				text-transform:uppercase; /*Deixa em letra MAI�SCULA*/
+				position:absolute; /*posi�ao absoluta em rela��o ao todo do site // relative � em rela��o ao seu container */
+				top:-20px;
+				left:370px; 
+			}
+			
+			nav#menu h1 {
+				display:none;
+			}	
+			
+			nav#menu li {
+				display:inline-block; /*Deixa a Lista de op��es do menu um do lado do outro*/
+				background-color:#dddddd;
+				padding:10px;
+				margin:2px;
+				transition:background-color 1s; /*Transi��o da passada do mouse */
+			}
+			
+			nav#menu li:hover /* (hover) Quando passar o mouse por cima dos bot�es*/{
+				background-color:#606060;
+			}
+			
+			nav#menu a {
+				color:black;
+				text-decoration:none;
+			}
+			
+			nav#menu a:hover {
+				color:white;
+				text-decoration: underline;
+			}
+		
+	/*----------- FORMATA��O DE IMAGENS COM LEGENDAS ------- */
+		 	
+			figure.foto-legenda {
+				position:relative /* Fica Relativo ao codigo HTML, onde ele foi colocado no HTML */;
+				border:8px solid white;
+				box-shadow: 1px 1px 4px black;
+			}
+			figure.foto-legenda img {
+				width:100%;
+				height:100%;
+			}
+			figure.foto-legenda figcaption {
+				position:absolute; /* Tem uma posi��o absoluta dentro do seu container (figure) que no caso � a borda branca que fica na posi�ao top 0  */ 
+				top:0px;
+				background-color:rgba(0,0,0,.4);
+				color:white;
+				width:100%;
+				height:100%;
+				/* Deixando a borda preta 100% sobre a img,com width e height */
+				padding:10px; /*Espa�o dentro da imagem da borda preta */
+				box-sizing:border-box; /*Cria um BOX pra segurar a borda dentro da imagem */
+				opacity:0;
+				transition:opacity 1s;
+			}
+			figure.foto-legenda:hover figcaption /*Quando passar o Mouse em cima da Imagem aparecer a legenda*/{
+				opacity:1;
+			}
+			
+		
+/*----------FORMATA��O DA TABELA ESPECIFICA��ES T�CNICAS ------------*/
+		
+		table#tabela {
+			border: 1px solid #606060;
+			border-spacing:0px; /*tira o espa�o entre as linhas */
+			margin-left:auto;
+			margin-right:auto;
+		}
+		table#tabela td {
+			border: 1px solid #606060;
+			padding: 10px;
+			text-align:center;
+			vertical-align:middle;
+		}
+		table#tabela td.coluna_esquerda {
+			color:white;
+			background-color:#606060;
+			vertical-align:top;
+			font-weight:bold;
+			text-align:right;
+		}
+		table#tabela td.coluna_direita {
+			background-color:#cecece;
+			text-align:left;
+		}
+		table#tabela caption {
+			color:#888888;
+			font-size:13pt;
+			font-weight:bolder;
+		}
+		table#tabela caption span {
+			display: block;
+			float:right;
+			font-size:9pt;
+			color:#000000;
+			margin-top:10px;
+		}
+		
+	
+			

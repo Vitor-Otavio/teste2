@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8"/>
+		<title> Tudo Sobre Google Glass </title>
+        <!--FAZENDO A LIGAÇÃO DO HTML COM CSS -->
+		<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>  
+		<link rel="stylesheet" type="text/css" href="_css/form.css"/>
+		<link rel="icon" type="image/png" href="_imagens/glass-oculos-preto-peq.png"/>
+	</head>
+	<script>
+		function mudaFoto (foto) {
+			document.getElementById("icone").src = foto;
+		}
+		
+		function calculo_total() {
+			var qtd = parseInt(document.getElementById( '_quantidade').value);
+			total = qtd * 1500;
+			document.getElementById('_preco').value = total;
+		}
+		
+	</script>
+	<body>
+		<div id="interface">
+			
+			<header id="cabecalho"><!--CABEÇALHO DO SITE-->
+				<hgroup>
+					<h1>Google Glass</h1>
+					<h2>A revolução do Google está chegando</h2>
+				</hgroup>
+				
+					<img id="icone" src="_imagens/contato.png"/>
+				
+		                           <!--  MENU   -->
+				
+				<nav id="menu"> <!--ÁREA DE NAVEGAÇÃO-->
+					<h1>Menu Principal</h1>
+					<ul type="disc" > <!-- Lista Não Ordenada -->
+						<li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')" ><a href="index.html">Home</a></li>
+						<li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')" ><a href="specs.html">Especificações</a></li>
+						<li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+						<li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+						<li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+					</ul>
+				</nav>
+			</header>
+
+<!-- --------------- CONTEÚDO PRINCIPAL (SESSÃO) ------------------------------ -->
+			
+			<section id="conteudo-full">
+				<article id="noticia-principal">
+					<header id="cabecalho-artigo">
+						<hgroup>	
+							<h3>Fale Conosco > &nbsp Contato</h3>
+							<h1>Formulário de Contato</h1>
+							<h2>por Gabriel Lopes </h2>
+							<h3 class="_direita">Atualizado em 01/Maio/2013</h3>
+						</hgroup>
+					</header>
+	
+<!--------------------- FORMULÁRIO ------------------------------->
+					
+					<form method="post" id="_formulario" oninput="calculo_total();">
+						<fieldset id="usuario"><legend>Identificação do Usuário</legend> <!-- Conjunto de campos -->
+								
+								<p><label for="_nome">Nome:</label><input type="text" name="text_nome" id="_nome" size="20" maxlength="30" placeholder=" Nome Completo"  /></p>
+								
+								<p><label for="_senha">Senha:</label><input type="password" name="password_senha" id="_senha" size="4" maxlength="8" placeholder=" 8 dígidos"></p>
+								
+								<p><label for="_email">E-mail:</label><input type="email" name="email_email" id="_email" size="20" maxlength="40" placeholder=" Ex:abcd123@hotmail.com"></p>
+								
+								<fieldset id="sexo"><legend>Sexo</legend>
+									<input type="radio" name="radio_sex" id="_masc" /><label for="_masc">Masculino</label><br/>
+									<input type="radio" name="radio_sex" id="_fem" /> <label for="_fem">Feminino</label>
+								</fieldset>
+								
+								<p>Data de Nascimento:<input type="date" name="date_data" id="_data"></p>
+								
+						</fieldset>
+						
+						<fieldset id="endereco"><legend>Endereço do Usuário</legend>
+							<p><label for="_logradouro">Logradouro:</label><input type="text"  name="text_logradouro" id="_logradouro" size="20" maxlength="80" placeholder=" Rua, Avenida,etc,..."></p>
+							
+							<p><label for="_numero">Número:</label><input type="number" name="number_numero" id="_numero" min="0" max="99999"/></p>
+							
+							<p><label for="_estado">Estado:</label>
+							<select name="_estado" id="select_estado"> 
+								
+								<optgroup label="Região Centro-Oeste">
+									<option>Distrito Federal</option>
+									<option>Goiás</option>
+									<option>Mato Grosso</option>
+								</optgroup>
+								
+								<optgroup label="Região Nordeste">
+									<option>Alagoas</option>
+									<option>Bahia</option>
+									<option>Ceará</option>
+									<option>Maranhão</option>
+									<option>Mato Grosso do Sul</option>
+									<option>Paraíba</option>
+									<option>Pernambuco</option>
+									<option>Piauí</option>
+									<option>Rio Grande do Norte</option>
+									<option>Sergipe</option>
+								</optgroup>
+								
+								<optgroup label="Região Norte">
+									<option>Acre </option>
+									<option>Amapá</option>
+									<option>Amazonas</option>
+									<option>Pará</option>
+									<option>Rondônia</option>
+									<option>Roraima</option>
+									<option>Tocantis</option>
+								</optgroup>
+								
+								<optgroup label="Região Sudeste">
+									<option>Espírito Santo</option>
+									<option>Minas Gerais</option>
+									<option>Rio de Janeiro</option>
+									<option selected>São Paulo</option>
+								</optgroup>
+								
+								<optgroup label="Região Sul">
+									<option>Paraná</option>
+									<option>Rio Grande do Sul</option>
+									<option>Santa Catarina</option>
+								</optgroup>								
+									
+							</select>
+							</p>
+							
+							<p><label for="_cidade">Cidade:</label><input type="text" name="text_cidade" id="_cidade" maxlength="40"size="20" placeholder=" Sua Cidade"/></p>
+						</fieldset>
+						
+						<fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+							<p><label for="_grau">Grau de Urgência:</label> Min<input type="range" name="range_grau" id="_grau" min="0"max="10" step="2"/>Máx</p>
+							<p><label for="_mensagem">Mensagem:</label><textarea name="text_mensagem" id="_mensagem" cols="40" rows="5"placeholder=" Digite Sua Mensagem"></textarea></p>
+						</fieldset>
+						
+						<fieldset id="pedido"><legend>Quero um Google Glass</legend>
+							<p><label for="_pedido">Gostaria de adquirir um Google Glass<br/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp quando disponível</label><input type="checkbox" name="checkbox_pedido" id="_pedido"/></p>
+							<p><label for="_cor">Cor:</label> <input type="color" name="color_cor" id="_cor" value="#0000FF"/></p>
+							<p><label for="_quantidade">Quantidade: </label><input type="number" name="number_quantidade" id="_quantidade" min="0" max="5"/></p>
+							<p><label for="_preco">Preço Total: R$</label>
+							<input type="text" name="text_preco" id="_preco" placeholder="Total a Pagar" readonly /></p>
+						</fieldset>
+						
+						<input type="image" name="image_enviar" src="_imagens/botao-enviar.png"/>
+					</form>
+		         
+				 </article>
+	       </section>
+
+<!-- ------------- CONTEÚDO RODAPÉ --------------- -->
+				
+				<footer id="conteudo-rodape">
+					<p>Copyright &copy; 2014 - by Gabriel Lopes <br/>
+					<a href="https://www.facebook.com/gabriel.lopes.5872" target="_blank"><img src="_imagens/Logos-Facebook-icon.png"></a>
+					<a href="http://instagram.com/gabrieel_lr/" target="_blank"><img src="_imagens/Logos-Instagram-icon.png"></a></p>
+				</footer>
+		</div>
+	</body>
+</html>
